@@ -26,5 +26,8 @@
     "**/*.{js,jsx,ts,tsx,json}": [
       "prettier --plugin prettier-plugin-organize-imports --write"
     ]
+  },
+  "dependencies": {
+    "lucide-react": "^0.284.0"
   }
 }

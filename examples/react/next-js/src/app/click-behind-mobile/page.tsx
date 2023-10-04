@@ -13,7 +13,7 @@ import {
   UserPlusIcon,
 } from 'lucide-react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { HStack, Stack } from 'styled-system/jsx'
 import { Button } from '~/components/ui/button'
 import {
@@ -33,8 +33,12 @@ import { Typography } from '~/components/ui/typography'
 export default function ClickBehindMobile() {
   const router = useRouter()
 
+  const searchParams = useSearchParams()
+
   return (
     <Stack>
+      <p>{searchParams.get('index')}</p>
+
       {Array.from({ length: 10 }).map((_, i) => (
         <Link key={i} href={`/click-behind-mobile?index=${i}`}>
           <Button

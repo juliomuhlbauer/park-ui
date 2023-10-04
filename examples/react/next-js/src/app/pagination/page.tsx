@@ -18,7 +18,7 @@ export default function PaginationDemo() {
   return <Demo count={90} />
 }
 
-export const Demo = (props: PaginationProps) => {
+const Demo = (props: PaginationProps) => {
   return (
     <Pagination count={90} pageSize={10} siblingCount={1} defaultPage={2}>
       {({ pages }: PaginationContext) => (

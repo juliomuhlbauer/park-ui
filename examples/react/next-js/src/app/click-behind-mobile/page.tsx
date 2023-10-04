@@ -55,7 +55,7 @@ export default function ClickBehindMobile() {
   )
 }
 
-export const DemoMenu = (props: MenuProps) => {
+const DemoMenu = (props: MenuProps) => {
   return (
     <Menu {...props}>
       <MenuTrigger asChild>

@@ -16,7 +16,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { HStack, Stack } from 'styled-system/jsx'
 import { Button } from '~/components/ui/button'
-import { Input } from '~/components/ui/input'
 import {
   Menu,
   MenuContent,

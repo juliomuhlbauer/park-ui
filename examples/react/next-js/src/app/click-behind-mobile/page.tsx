@@ -12,6 +12,7 @@ import {
   UserIcon,
   UserPlusIcon,
 } from 'lucide-react'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { HStack, Stack } from 'styled-system/jsx'
 import { Button } from '~/components/ui/button'
@@ -36,16 +37,18 @@ export default function ClickBehindMobile() {
   return (
     <Stack>
       {Array.from({ length: 10 }).map((_, i) => (
-        <Button
-          key={i}
-          variant="outline"
-          placeholder={`Input ${i}`}
-          onClick={() => {
-            router.push(`/click-behind-mobile?index=${i}`)
-          }}
-        >
-          Hello {i}
-        </Button>
+        <Link key={i} href={`/click-behind-mobile?index=${i}`}>
+          <Button
+            variant="outline"
+            placeholder={`Input ${i}`}
+            onClick={() => {
+              router.push(`/click-behind-mobile?index=${i}`)
+            }}
+            w="100%"
+          >
+            Hello {i}
+          </Button>
+        </Link>
       ))}
 
       <DemoMenu />

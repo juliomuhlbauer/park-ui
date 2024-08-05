@@ -14,8 +14,8 @@ const Demo = () => {
       </Dialog.Trigger>
       <Dialog.Backdrop />
       <Dialog.Positioner>
-        <Dialog.Content h="100%" w="100%">
-          <Stack gap="8" p="6">
+        <Dialog.Content h="100%" w="100%" overflow="auto">
+          <Stack gap="8" p="6" h="150vh">
             <Stack gap="1">
               <Dialog.Title>Dialog Title</Dialog.Title>
               <Dialog.Description>Dialog Description</Dialog.Description>
